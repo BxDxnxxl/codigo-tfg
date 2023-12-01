@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/comprobar.css">
+  <script src="../js/comprobar.js"></script>
+</head>
+
+<!-- Header -->
+<header>
+  <img src="../img/LOGOFINALV33.png" alt="Logo">
+  <h1>Comprobar</h1>
+  <img src="../img/perfil.png" alt="Imagen de perfil" class="profile-image">
+</header>
+
+<body>
+  <div class="formularios-contenedor">
+    <form method="get">
+      <label for="profesor">Nombre del profesor:</label>
+      <input type="text" id="profesor" name="profesor">
+      <button type="button" onclick="buscarProfesor()">
+        <img src="../img/lupa.png" alt="Buscar">
+      </button>
+    </form>
+
+    <form method="get">
+      <label for="curso">Código del curso:</label>
+      <input type="text" id="curso" name="curso">
+      <button type="button" onclick="buscarCurso()">
+        <img src="../img/lupa.png" alt="Buscar">
+      </button>
+    </form>
+  </div>
+
+  <a href="inicio.html" id="volverBtn">
+    <img src="../img/atras.png" alt="Volver a Inicio" width="73" height="73">
+  </a>
+
+</body>
+
+</html>

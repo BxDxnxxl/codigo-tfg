@@ -1,0 +1,68 @@
+/* HEADER */
+header {
+  background-color: #0593CE;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  width: 180px;
+  height: auto;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header .profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ESTILOS DE LA TABLA */
+table {
+  margin-top: 100px;
+  width: 1002px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-collapse: collapse;
+}
+
+th, td {
+  width: 334px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #000;
+}
+
+th {
+  background-color: #0593CE;
+  color: #fff;
+}
+
+/* Fondo de filas impares */
+tr:nth-child(odd) td {
+  background-color: #F5F5F5;
+}
+
+/* Estilo para filas pares */
+tr:nth-child(even) td {
+  background-color: #ECECEC;
+}
+
+/* BOTON FLECHA */
+.boton-flecha {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.boton-flecha img {
+  width: 73px;
+}

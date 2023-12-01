@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../js/tablaCurso.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/tablaCurso.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="../img/LOGOFINALV33.png" alt="Logo">
+        <h1>Listado</h1>
+        <img src="../img/perfil.png" alt="Imagen de perfil" class="profile-image">
+    </header>
+
+    <div id="resultados-container"></div>
+
+    <a href="comprobar.html" class="boton-flecha">
+        <img src="../img/atras.png" alt="Volver al índice">
+    </a>
+
+    <script>
+        var parametros = new URLSearchParams(window.location.search);
+        var datosCodificados = parametros.get("datos");
+        var datosJSON = decodeURIComponent(datosCodificados);
+        var datos = JSON.parse(datosJSON);
+
+        var tablaHTML = '<table>';
+        tablaHTML += '<tr><th>Profesor</th><th>Tipo de Documento</th><th>Entregado</th></tr>';
+
+        datos.forEach(function (datos) {
+            tablaHTML += '<tr>';
+            tablaHTML += '<td>' + datos.nombre_completo + '</td>';
+            tablaHTML += '<td>' + datos.tipo_documento + '</td>';
+
+            if (datos.entregado == 0) {
+                tablaHTML += '<td><img src="../img/cruz.png" alt="Cruz" style="width: 25px; height: 25px;"></td>';
+            } else if (datos.entregado == 1) {
+                tablaHTML += '<td><img src="../img/tick.png" alt="Tick" style="width: 25px; height: 25px;"></td>';
+            }
+
+            tablaHTML += '</tr>';
+        });
+
+        tablaHTML += '</table>';
+
+        document.getElementById("resultados-container").innerHTML = tablaHTML;
+    </script>
+
+</body>
+
+</html>

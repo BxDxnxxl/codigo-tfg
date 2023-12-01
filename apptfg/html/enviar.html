@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../js/enviar.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/enviar.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="../img/LOGOFINALV33.png" alt="Logo">
+    <h1>Enviar Documentación</h1>
+    <img src="../img/perfil.png" alt="Imagen de perfil" class="profile-image">
+  </header>
+
+  <form onsubmit="return validarFormulario();">
+    <div class="select-container">
+      <label for="curso">Curso:</label>
+      <select id="curso" name="curso"></select>
+    </div>
+
+    <div class="select-container">
+      <label for="documento">Documento:</label>
+      <select id="documento" name="documento"></select>
+    </div>
+
+    <div class="select-container">
+      <label for="profesor">Profesor:</label>
+      <select id="profesor" name="profesor"></select>
+    </div>
+
+    <div class="boton-1">
+      <label for="adjunto" class="enviar-btn">Seleccionar Archivo</label>
+      <input type="file" id="adjunto" name="adjunto" accept=".pdf, .doc, .docx" class="archivo-input" style="display: none;">
+    </div>
+
+    <div>
+      <button class="boton-2" type="button" onclick="enviarDocumentos()">Enviar Documentos</button>
+    </div>
+  </form>
+
+  <a href="inicio.html" class="boton-flecha">
+    <img src="../img/atras.png" alt="Volver al índice">
+  </a>
+
+  <script>
+    opcionesCurso();
+    opcionesDocumento();
+    opcionesProfesor();
+  </script>
+
+</body>
+
+</html>
